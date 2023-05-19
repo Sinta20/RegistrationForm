@@ -50,12 +50,7 @@ public class MainActivityTest {
                         isDisplayed()));
         appCompatEditText12.perform(replaceText("Berzins"), closeSoftKeyboard());
 
-        ViewInteraction appCompatEditText13 = onView(
-                allOf(withId(R.id.edtTxtEmail),
-                        childAtPosition(
-                                childAtPosition(withId(android.R.id.content), 0), 5),
-                        isDisplayed()));
-        appCompatEditText13.perform(replaceText("jainisberzins@example.com"), closeSoftKeyboard());
+   
 
         ViewInteraction materialButton = onView(
                 allOf(withId(R.id.btnRegister), withText("REGISTER"),
