@@ -2,6 +2,7 @@ package com.example.registrationform;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
+    @SuppressLint("SetTextI18n")
     public void onRegisterBtnClick(View view)
     {
         TextView txtFirstName = findViewById(R.id.txtFirstName);

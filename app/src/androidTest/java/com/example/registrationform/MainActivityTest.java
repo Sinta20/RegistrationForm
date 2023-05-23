@@ -48,7 +48,7 @@ public class MainActivityTest {
                         childAtPosition(
                                 childAtPosition(withId(android.R.id.content), 0), 2),
                         isDisplayed()));
-        appCompatEditText12.perform(replaceText("Berzins"), closeSoftKeyboard());
+        appCompatEditText12.perform(replaceText("Berlins"), closeSoftKeyboard());
 
    
 
