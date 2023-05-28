@@ -36,7 +36,8 @@ public class MainActivityTest {
 
     @Test
     public void mainActivityTest() {
-        onView(allOf (withId(R.id.edtTxtEmail), withText(“janisberzins@example.com”))) .check(matches(isDisplayed()));
+        onView(allOf (withId(R.id.edtTxtEmail), withText(“janisberzins@example.com”))) 
+            .check(matches(isDisplayed()));
         onView(withId(R.id.bntRegister)).perform(click());
     }
 }
