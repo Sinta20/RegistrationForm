@@ -36,38 +36,7 @@ public class MainActivityTest {
 
     @Test
     public void mainActivityTest() {
-        
-        ViewInteraction appCompatEditText13 = onView(
-                allOf(withId(R.id.edtTxtEmail),
-                        childAtPosition(
-                                childAtPosition(withId(android.R.id.content), 0), 5),
-                        isDisplayed()));
-        appCompatEditText13.perform(replaceText("jainisberzins@example.com"), closeSoftKeyboard());
-
-        ViewInteraction materialButton = onView(
-                allOf(withId(R.id.btnRegister), withText("REGISTER"),
-                        childAtPosition(
-                                childAtPosition(withId(android.R.id.content), 0), 1),
-                        isDisplayed()));
-        materialButton.perform(click());
-    }
-
-    private static Matcher<View> childAtPosition(
-            final Matcher<View> parentMatcher, final int position) {
-
-        return new TypeSafeMatcher<View>() {
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("Child at position " + position + " in parent ");
-                parentMatcher.describeTo(description);
-            }
-
-            @Override
-            public boolean matchesSafely(View view) {
-                ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent)
-                        && view.equals(((ViewGroup) parent).getChildAt(position));
-            }
-        };
+        onView(allOf (withId(R.id.edtTxtEmail), withText(“janisberzins@example.com”))) .check(matches(isDisplayed()));
+        onView(withId(R.id.bntRegister)).perform(click());
     }
 }
